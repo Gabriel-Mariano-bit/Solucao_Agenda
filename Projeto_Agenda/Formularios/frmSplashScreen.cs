@@ -14,7 +14,7 @@ namespace Projeto_Agenda
 {
     public partial class frmSplashScreen : Form
     {
-        SoundPlayer meuPlayer = new SoundPlayer(@"C:\Users\mathe\Downloads\2 Minute Timer Relaxing Music Lofi Fish Background.mp3");
+        SoundPlayer meuPlayer = new SoundPlayer(@"C:\Users\mathe\Downloads\2-Minute-Timer-Relaxing-Music-Lofi-Fish-Background.wav");
 
         public frmSplashScreen()
         {
@@ -25,7 +25,7 @@ namespace Projeto_Agenda
         private void timer1_Tick(object sender, EventArgs e)
         {
             panel2.Width += 2;
-            if (panel2.Width >= 599)
+            if (panel2.Width >= 800)
             {
                 timer1.Stop();
                 frmLogin frmLogin = new frmLogin();
