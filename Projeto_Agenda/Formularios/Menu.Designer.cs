@@ -37,6 +37,7 @@
             this.pessoasFiltroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioPessoasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioFiltroPorCidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,7 +99,8 @@
             // relatóriosToolStripMenuItem
             // 
             this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.relatórioPessoasToolStripMenuItem});
+            this.relatórioPessoasToolStripMenuItem,
+            this.relatórioFiltroPorCidadeToolStripMenuItem});
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
@@ -106,9 +108,16 @@
             // relatórioPessoasToolStripMenuItem
             // 
             this.relatórioPessoasToolStripMenuItem.Name = "relatórioPessoasToolStripMenuItem";
-            this.relatórioPessoasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.relatórioPessoasToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.relatórioPessoasToolStripMenuItem.Text = "Relatório Pessoas";
             this.relatórioPessoasToolStripMenuItem.Click += new System.EventHandler(this.relatórioPessoasToolStripMenuItem_Click);
+            // 
+            // relatórioFiltroPorCidadeToolStripMenuItem
+            // 
+            this.relatórioFiltroPorCidadeToolStripMenuItem.Name = "relatórioFiltroPorCidadeToolStripMenuItem";
+            this.relatórioFiltroPorCidadeToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.relatórioFiltroPorCidadeToolStripMenuItem.Text = "Relatório Filtro por Cidade";
+            this.relatórioFiltroPorCidadeToolStripMenuItem.Click += new System.EventHandler(this.relatórioFiltroPorCidadeToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -139,6 +148,7 @@
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pessoasFiltroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioPessoasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioFiltroPorCidadeToolStripMenuItem;
     }
 }
 

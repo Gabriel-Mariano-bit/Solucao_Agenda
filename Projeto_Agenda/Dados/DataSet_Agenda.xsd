@@ -91,32 +91,77 @@ SELECT ID, Nome, Endereço, Cidade, Telefone, Email, DataNascimento FROM Pessoa 
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Cidades_PessoasTableAdapter" GeneratorDataComponentClassName="Cidades_PessoasTableAdapter" Name="Cidades_Pessoas" UserDataComponentName="Cidades_PessoasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_AgendaConnectionString (Settings)" DbObjectName="DB_Agenda.dbo.Pessoa" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT Cidade
+FROM            Pessoa</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cidade" DataSetColumn="Cidade" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet_Agenda" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet_Agenda" msprop:Generator_DataSetName="DataSet_Agenda">
+  <xs:element name="DataSet_Agenda" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet_Agenda" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Agenda">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Pessoa" msprop:Generator_RowEvHandlerName="PessoaRowChangeEventHandler" msprop:Generator_RowDeletedName="PessoaRowDeleted" msprop:Generator_RowDeletingName="PessoaRowDeleting" msprop:Generator_RowEvArgName="PessoaRowChangeEvent" msprop:Generator_TablePropName="Pessoa" msprop:Generator_RowChangedName="PessoaRowChanged" msprop:Generator_RowChangingName="PessoaRowChanging" msprop:Generator_TableClassName="PessoaDataTable" msprop:Generator_RowClassName="PessoaRow" msprop:Generator_TableVarName="tablePessoa" msprop:Generator_UserTableName="Pessoa">
+        <xs:element name="Pessoa" msprop:Generator_RowClassName="PessoaRow" msprop:Generator_RowEvHandlerName="PessoaRowChangeEventHandler" msprop:Generator_RowDeletedName="PessoaRowDeleted" msprop:Generator_RowDeletingName="PessoaRowDeleting" msprop:Generator_RowEvArgName="PessoaRowChangeEvent" msprop:Generator_TablePropName="Pessoa" msprop:Generator_RowChangedName="PessoaRowChanged" msprop:Generator_UserTableName="Pessoa" msprop:Generator_RowChangingName="PessoaRowChanging" msprop:Generator_TableClassName="PessoaDataTable" msprop:Generator_TableVarName="tablePessoa">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="Nome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_UserColumnName="Nome" minOccurs="0">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="Nome" msprop:Generator_UserColumnName="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Endereço" msprop:Generator_ColumnPropNameInRow="Endereço" msprop:Generator_ColumnPropNameInTable="EndereçoColumn" msprop:Generator_ColumnVarNameInTable="columnEndereço" msprop:Generator_UserColumnName="Endereço" minOccurs="0">
+              <xs:element name="Endereço" msprop:Generator_UserColumnName="Endereço" msprop:Generator_ColumnPropNameInTable="EndereçoColumn" msprop:Generator_ColumnPropNameInRow="Endereço" msprop:Generator_ColumnVarNameInTable="columnEndereço" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Cidade" msprop:Generator_UserColumnName="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telefone" msprop:Generator_UserColumnName="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataNascimento" msprop:Generator_UserColumnName="DataNascimento" msprop:Generator_ColumnPropNameInTable="DataNascimentoColumn" msprop:Generator_ColumnPropNameInRow="DataNascimento" msprop:Generator_ColumnVarNameInTable="columnDataNascimento" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cidades_Pessoas" msprop:Generator_RowEvHandlerName="Cidades_PessoasRowChangeEventHandler" msprop:Generator_RowDeletedName="Cidades_PessoasRowDeleted" msprop:Generator_RowDeletingName="Cidades_PessoasRowDeleting" msprop:Generator_RowEvArgName="Cidades_PessoasRowChangeEvent" msprop:Generator_TablePropName="Cidades_Pessoas" msprop:Generator_RowChangedName="Cidades_PessoasRowChanged" msprop:Generator_RowChangingName="Cidades_PessoasRowChanging" msprop:Generator_TableClassName="Cidades_PessoasDataTable" msprop:Generator_RowClassName="Cidades_PessoasRow" msprop:Generator_TableVarName="tableCidades_Pessoas" msprop:Generator_UserTableName="Cidades_Pessoas">
+          <xs:complexType>
+            <xs:sequence>
               <xs:element name="Cidade" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_ColumnVarNameInTable="columnCidade" msprop:Generator_UserColumnName="Cidade" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -124,21 +169,6 @@ SELECT ID, Nome, Endereço, Cidade, Telefone, Email, DataNascimento FROM Pessoa 
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Telefone" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_ColumnVarNameInTable="columnTelefone" msprop:Generator_UserColumnName="Telefone" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Email" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_UserColumnName="Email" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="DataNascimento" msprop:Generator_ColumnPropNameInRow="DataNascimento" msprop:Generator_ColumnPropNameInTable="DataNascimentoColumn" msprop:Generator_ColumnVarNameInTable="columnDataNascimento" msprop:Generator_UserColumnName="DataNascimento" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet_Agenda = new Projeto_Agenda.Dados.DataSet_Agenda();
             this.pessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Agenda = new Projeto_Agenda.Dados.DataSet_Agenda();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pessoaTableAdapter = new Projeto_Agenda.Dados.DataSet_AgendaTableAdapters.PessoaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pessoaBindingSource
+            // 
+            this.pessoaBindingSource.DataMember = "Pessoa";
+            this.pessoaBindingSource.DataSource = this.dataSet_Agenda;
+            // 
+            // dataSet_Agenda
+            // 
+            this.dataSet_Agenda.DataSetName = "DataSet_Agenda";
+            this.dataSet_Agenda.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(975, 542);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dataSet_Agenda
-            // 
-            this.dataSet_Agenda.DataSetName = "DataSet_Agenda";
-            this.dataSet_Agenda.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pessoaBindingSource
-            // 
-            this.pessoaBindingSource.DataMember = "Pessoa";
-            this.pessoaBindingSource.DataSource = this.dataSet_Agenda;
-            // 
             // pessoaTableAdapter
             // 
             this.pessoaTableAdapter.ClearBeforeFill = true;
@@ -72,10 +72,10 @@
             this.ClientSize = new System.Drawing.Size(975, 542);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmVizualizaFormPessoas";
-            this.Text = "frmVizualizaFormPessoas";
+            this.Text = "Relatório de Pessoas";
             this.Load += new System.EventHandler(this.frmVizualizaFormPessoas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).EndInit();
             this.ResumeLayout(false);
 
         }

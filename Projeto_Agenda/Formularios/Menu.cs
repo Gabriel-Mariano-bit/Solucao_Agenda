@@ -39,5 +39,12 @@ namespace Projeto_Agenda
             objVizFormPessoa.MdiParent = this;
             objVizFormPessoa.Show();
         }
+
+        private void relatórioFiltroPorCidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVizualizaFormFiltroCidade objinfo = new frmVizualizaFormFiltroCidade();
+            objinfo.MdiParent = this;
+            objinfo.Show();
+        }
     }
 }
